@@ -44,11 +44,9 @@ public class C03_SoftAssert {
         driver.findElement(By.xpath("//button[@id =\"signin_button\"]")).click();
 
         WebElement userName =driver.findElement(By.xpath("//input[@id=\"user_login\"]"));
-        userName.click();
         userName.sendKeys("username");
 
         WebElement password = driver.findElement(By.xpath("//input[@id=\"user_password\"]"));
-        password.click();
         password.sendKeys("password",Keys.ENTER);
 
         driver.navigate().back();

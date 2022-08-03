@@ -14,6 +14,7 @@ import java.time.Duration;
 
 public class C01_Alerts {
     SoftAssert assertion1;
+    WebDriver driver;
     //todo
     // ● https://the-internet.herokuapp.com/javascript_alerts adresine gidin.
     // ● Bir metod olusturun: acceptAlert
@@ -26,7 +27,7 @@ public class C01_Alerts {
     //        ○ 3. butona tıklayın, uyarıdaki metin kutusuna isminizi yazin, OK butonuna
     //        tıklayın ve result mesajında isminizin görüntülendiğini doğrulayın.
 
-    WebDriver driver;
+
 
     @BeforeClass
     public void setDriver(){

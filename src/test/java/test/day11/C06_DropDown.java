@@ -1,5 +1,6 @@
 package test.day11;
 
+import com.beust.ah.A;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -50,7 +51,7 @@ public class C06_DropDown {
 
         List<WebElement> webElements = select.getOptions();
         System.out.println("webElements.size() = " + webElements.size());
-        //Assert.assertEquals(webElements.size(),45,"Kategori sayisi eşit değil.");
+        Assert.assertEquals(webElements.size(),45,"Kategori sayisi eşit değil.");
     }
 
     @Test
