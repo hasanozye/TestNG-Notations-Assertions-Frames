@@ -42,27 +42,45 @@ public class C01_WindowHandle {
     public void test() {
         // amazon.com a git
         driver.get("https://www.amazon.com");
+
+        //    Sayfana handle değerini al
         String amazonHandle = driver.getWindowHandle();
         System.out.println("amazonHandle = " + amazonHandle);
+
+        //    Yeni bir pencere aç
         driver.switchTo().newWindow(WindowType.WINDOW);
+
+        //    bestbuy.com git
         driver.get("https://www.bestbuy.com");
 
+        //    yeni açılan pencerenin handel değerini al
         String bestHandle = driver.getWindowHandle();
         System.out.println("bestHandle = " + bestHandle);
 
+        //    sonra bütün handelların değerini al
         Set<String> handless = driver.getWindowHandles();
         System.out.println("handless = " + handless);
 
+
+        //    şimdi yeni bir tab aç
         driver.switchTo().newWindow(WindowType.TAB);
+
+        //        facebook.com a git
         driver.get("https://www.facebook.com");
 
+        //    amazon.com a geri dön
         driver.switchTo().window(amazonHandle);
+
+        //    arama kısmına  Nutella yaz ve ara
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Nutella", Keys.ENTER);
 
+        //        sonra bestbuy.com geç, title  doğrula
         driver.switchTo().window(bestHandle);
         String bestTitle = driver.getTitle();
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(bestTitle.contains("bestbuy.com"), "bestbuy.com içermiyor.");
+
+        //    Şimdi de facebook.com penceresine git
 
         Set<String> allHandles = driver.getWindowHandles();
         System.out.println("allHandles = " + allHandles.toString());
