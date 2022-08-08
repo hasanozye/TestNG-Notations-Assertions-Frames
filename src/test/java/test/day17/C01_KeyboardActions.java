@@ -19,7 +19,7 @@ public class C01_KeyboardActions extends TestBase {
     public void test() throws InterruptedException {
         driver.get("https://html.com/tags/iframe/");
         Actions actions = new Actions(driver);
-        actions.sendKeys(Keys.PAGE_DOWN).build().perform();
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
         Thread.sleep(2000);
 
         WebElement iframe = driver.findElement(By.xpath("//iframe[@src=\"https://www.youtube.com/embed/owsfdh4gxyc\"]"));

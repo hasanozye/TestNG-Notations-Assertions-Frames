@@ -75,7 +75,7 @@ public class C02_Faker extends TestBase {
       monthSelect.selectByVisibleText("Nis");
 
       //Tarih icin yil secin
-      yearSelect.selectByVisibleText("2010");
+      yearSelect.selectByVisibleText("2000");
 
       //Cinsiyeti secin
         actions.sendKeys(Keys.TAB).sendKeys(Keys.TAB).sendKeys(Keys.RIGHT).perform();
@@ -95,6 +95,7 @@ public class C02_Faker extends TestBase {
     @Test
     public void faker(){
         Faker faker = new Faker();
+        System.out.println("faker.relationships().spouse() = " + faker.relationships().spouse());
         Set<String> str= Collections.singleton(faker.witcher().quote());
         System.out.println("str = " + str);
 
