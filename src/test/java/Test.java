@@ -1,14 +1,14 @@
 import com.github.javafaker.Faker;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Test {
     public static void main(String[] args) {
 
-        Faker faker = new Faker();
+        String day=new SimpleDateFormat("yyMMddhhmmss").format(new Date());
 
-        for (int i = 0; i < 10; i++) {
-            if (!faker.witcher().quote().equals(faker.witcher().quote()))
-            System.out.println((i + 1) + ". WitcherGafları : " + faker.witcher().quote());
-        }
+        System.out.println("day = " + day);
 
     }
 
