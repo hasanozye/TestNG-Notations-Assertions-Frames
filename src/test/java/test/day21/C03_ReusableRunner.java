@@ -11,7 +11,7 @@ public class C03_ReusableRunner {
     public void test01(){
         String path = "src/test/java/resources/ulkeler.xlsx";
         String eR ="Azerbaycan";
-        String actual= String.valueOf(C03_ReusableMethodsExcel.hucreGetir(path,"Sayfa1",11,2));
+        String actual= String.valueOf(C03_ReusableMethodsExcel.excelToMap(path,"Sayfa1"));
         Assert.assertEquals(actual,eR,"NOPE");
 
     }
