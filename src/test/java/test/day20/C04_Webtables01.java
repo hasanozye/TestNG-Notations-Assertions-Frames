@@ -1,5 +1,8 @@
 package test.day20;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 import utilities.TestBase;
 
 public class C04_Webtables01 extends TestBase {
@@ -12,4 +15,24 @@ public class C04_Webtables01 extends TestBase {
     //  b. Örnek: printData (3.5); =>
     //  3. satır, 5. Sütundaki veriyi yazdırmalıdır.
     //* //tbody[3]//td[5]
+
+    public void printData(int row, int column) throws InterruptedException {
+        driver.get("https://editor.datatables.net/");
+        Thread.sleep(5000);
+        WebElement rowCol= driver.findElement(By.xpath("//tr["+row+"]//td["+column+"]"));
+        System.out.println("rowCol.getText() = " + rowCol.getText());
+    }
+
+    @Test
+    public void printDataTest() throws InterruptedException {
+
+        printData(6,6);
+
+    }
+
+
+
+
+
+
 }
