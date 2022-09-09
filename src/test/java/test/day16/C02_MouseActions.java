@@ -58,7 +58,7 @@ public class C02_MouseActions extends TestBase {
         driver.switchTo().window(page2);
         String expectedElement="Elemental Selenium";
         String actualElement=driver.findElement(By.tagName("h1")).getText();
-        Assert.assertEquals(actualElement,expectedElement,"Elemental Selenium Yoktur.");
+        Assert.assertEquals(actualElement,expectedElement,"Elementall Selenium Yoktur.");
 
 
 

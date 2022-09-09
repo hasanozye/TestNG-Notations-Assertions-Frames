@@ -16,11 +16,7 @@ public class WriteExcel {
 
         FileInputStream fis = new FileInputStream(path);
         Workbook workbook = WorkbookFactory.create(fis);
-
-
         FileOutputStream fos = new FileOutputStream(path);
-
-
 
         Sheet sheet = workbook.getSheetAt(0);
 
